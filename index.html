@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>سوق الحي</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>سوق الحي</h1>
+    <p class="tag">بيع وشراء داخل الحي بسهولة</p>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <input id="search" placeholder="ابحث عن منتج أو خدمة..." />
+      <select id="neighbourSelect">
+        <option value="all">كل الأحياء</option>
+        <option value="الرياض - العليا">الرياض - العليا</option>
+        <option value="جدة - الحمراء">جدة - الحمراء</option>
+        <option value="الدمام - المجمع">الدمام - المجمع</option>
+      </select>
+      <button id="openFormBtn">أضف إعلان جديد</button>
+    </section>
+
+    <section id="listings" class="listings">
+      <!-- items injected by JS -->
+    </section>
+
+    <aside id="formPanel" class="form-panel hidden" aria-hidden="true">
+      <h2>أضف إعلان</h2>
+      <form id="addForm">
+        <label>العنوان<input name="title" required /></label>
+        <label>الوصف<textarea name="description" required></textarea></label>
+        <label>السعر (SAR)<input name="price" type="number" required /></label>
+        <label>الحي<input name="neighbour" required placeholder="مثال: الرياض - العليا" /></label>
+        <label>الصورة (رابط)<input name="image" placeholder="رابط صورة (اختياري)" /></label>
+        <div class="form-actions">
+          <button type="submit">نشر</button>
+          <button type="button" id="cancelBtn">إلغاء</button>
+        </div>
+      </form>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 سوق الحي — نسخة تجريبية</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
